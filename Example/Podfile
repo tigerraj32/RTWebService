@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RTWebService_Example' do
+  pod 'RTWebService', :path => '../'
+
+  target 'RTWebService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
