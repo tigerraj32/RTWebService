@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (4.3.0)
+  - RTWebService (0.1.0):
+    - Alamofire (~> 4.3)
+
+DEPENDENCIES:
+  - RTWebService (from `../`)
+
+EXTERNAL SOURCES:
+  RTWebService:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  RTWebService: a33308968da52b5140198444a0e68c63ce5dbf0f
+
+PODFILE CHECKSUM: 51ae79bf3db01e2cd5e5288e45d0dfd346638fef
+
+COCOAPODS: 1.2.0.rc.1

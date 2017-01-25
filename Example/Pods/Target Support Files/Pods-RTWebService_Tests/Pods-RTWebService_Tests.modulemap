@@ -1,0 +1,6 @@
+framework module Pods_RTWebService_Tests {
+  umbrella header "Pods-RTWebService_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module RTWebService {
+  umbrella header "RTWebService-umbrella.h"
+
+  export *
+  module * { export * }
+}

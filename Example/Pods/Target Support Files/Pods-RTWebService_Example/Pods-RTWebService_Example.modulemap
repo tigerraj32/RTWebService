@@ -1,0 +1,6 @@
+framework module Pods_RTWebService_Example {
+  umbrella header "Pods-RTWebService_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
