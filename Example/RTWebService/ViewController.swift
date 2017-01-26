@@ -2,41 +2,80 @@
 //  ViewController.swift
 //  RTWebService
 //
-//  Created by rajan on 01/23/2017.
-//  Copyright (c) 2017 rajan. All rights reserved.
+//  Created by Rajan Twanabashu on 01/23/2017.
+//  Copyright (c) 2017 Rajan Twanabashu. All rights reserved.
 //
 
 import UIKit
 import RTWebService
+import AEXML
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let payload = RTPayload.init(parameter: ["limit":100, "offset":0, "path":"", "user_id":"57ed03d52d95e54e568652b0"], parameterEncoding:.defaultUrl)
-        let req = RTRequest.init(requestUrl: "http://uatbdmobile.com:3001/api/bd/assets",
+        /*
+        let payload = RTPayload.init(parameter: ["page":2], parameterEncoding:.defaultUrl)        
+        let req = RTRequest.init(requestUrl: "https://reqres.in/api/user",
                                  requestMethod: .get,
-                                 header: ["language":"en", "device-type":"ios","api-key":"4c523dc68c1c727b2bb3ad069a31db31672be2b87e353afebbcfacc9f9ed9c77b2a260ece3a097e6405422b5e293a0fa67df014ab65136e3f1640907fad072dc"],
+                                 header: ["language":"en"],
                                  payload: payload)
         
-       
         RTWebService.restCall(request: req) { (response) in
             print("actual output ------------------------")
             switch response {
             case .success(let res):
-                    print("response value")
-                    print(res)
+                print("response value")
+                print(res)
             case .failure(let error):
-                    print("error value")
-                    print(error)
-            
+                print("error value")
+                print(error)
+                
             }
-            
-            
-            
         }
-   
+        
+        
+        */
+        
+        //SOAP Call
+        
+        let soap = AEXMLDocument()
+        let envelope = soap.addChild(name: "soapenv:Envelope",
+                                     attributes: ["xmlns:soapenv":"http://schemas.xmlsoap.org/soap/envelope/",
+                                                  "xmlns:cat":"NS1/pcacsoap"])
+        
+        let header = envelope.addChild(name: "soapenv:Header")
+        let body = envelope.addChild(name: "soapenv:Body")
+        let catInfo = body.addChild(name: "cat:sendcataloginfo")
+        let request = catInfo.addChild(name: "cat:request")
+        let ttrequest = request.addChild(name: "cat:ttrequest")
+        ttrequest.addChild(name: "cat:calltype", value: "category", attributes: [:])
+        ttrequest.addChild(name: "cat:code", value: "18,7,0,15,16", attributes: [:])
+        
+        let soapPayload = RTPayload(parameter: ["soapdata" : soap.xml], parameterEncoding: .custom)
+        let req1 = RTRequest.init(requestUrl: "http://catapp.javra.com:8080/pcactest/wsa1",
+                                 requestMethod: .post,
+                                 header: ["language":"en",
+                                          "SOAPAction":"",
+                                          "length": String(soap.xml.characters.count),
+                                          "Content-Type": "text/xml"],
+                                 payload: soapPayload)
+        
+        
+        RTWebService.soapCall(request: req1) { (response) in
+            print("actual output ------------------------")
+            switch response {
+            case .success(let res):
+                print("response value")
+                print(res)
+            case .failure(let error):
+                print("error value")
+                print(error)
+                
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

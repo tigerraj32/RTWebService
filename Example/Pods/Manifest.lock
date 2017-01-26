@@ -1,6 +1,8 @@
 PODS:
+  - AEXML (4.0.1)
   - Alamofire (4.3.0)
-  - RTWebService (0.1.0):
+  - RTWebService (0.1.1):
+    - AEXML (~> 4.0)
     - Alamofire (~> 4.3)
 
 DEPENDENCIES:
@@ -11,8 +13,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  RTWebService: ee613a4760d2f306e133fe0eab105276cc76de55
+  RTWebService: b1de0f9f8363d4c8a90ea68310bcf7848c4d7d98
 
 PODFILE CHECKSUM: 51ae79bf3db01e2cd5e5288e45d0dfd346638fef
 
