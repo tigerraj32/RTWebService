@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         //SOAP Call
         
-        /*
+        
         // Create XML Document
         let soap = AEXMLDocument()
         let envelope = soap.addChild(name: "soap:Envelope",
@@ -65,14 +65,9 @@ class ViewController: UIViewController {
                                           "Content-Type": "text/xml"],
                                  payload: soapPayload)
         
-        */
+ 
         
-        let soapPayload = RTPayload(parameter: ["IPAddress" : "124.41.219.215"], parameterEncoding: .defaultUrl)
-        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net//geoipservice.asmx/GetGeoIP",
-                                  requestMethod: .get,
-                                  header: ["language":"en",
-                                           "Content-Type": "text/xml"],
-                                  payload: soapPayload)
+    
         
         RTWebService.soapCall(request: req1) { (response) in
             print("actual output ------------------------")
