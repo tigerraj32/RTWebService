@@ -55,27 +55,27 @@ public class RTWebService {
                           parameters: request.payload?.parameter,
                           encoding: (request.payload?.parameterEncoding)!,
                           headers: request.header)
-                        .debugLog()
-                        .responseJSON { (response) in
-                            //response.debugLog()
-                            //print(type(of:response.result.value))
-                            switch response.result {
-                            case .success:
-                                let res = RTResponse(value: response.result.value) as! Any
-                                let result = RTResult.success(res)
-                                onCompletion(result)
-                            case .failure(let error):
-                                 onCompletion(RTResult.failure(error))
-                            default:
-                                 print(response)
-                            }
-                           
-                           
+            .debugLog()
+            .responseJSON { (response) in
+                //response.debugLog()
+                //print(type(of:response.result.value))
+                switch response.result {
+                case .success:
+                    let res = RTResponse(value: response.result.value) as! Any
+                    let result = RTResult.success(res)
+                    onCompletion(result)
+                case .failure(let error):
+                    onCompletion(RTResult.failure(error))
+                default:
+                    print(response)
+                }
+                
+                
         }
         
-      
+        
     }
-
+    
     @discardableResult
     public class  func soapCall(request: RTRequest, onCompletion: @escaping (RTResult<Any>)->Void){
         
@@ -86,9 +86,17 @@ public class RTWebService {
                           headers: request.header)
             .debugLog()
             .responseString{ (response) in
-                response.debugLog()
-                
-                
+                //response.debugLog()
+                switch response.result {
+                case .success:
+                    let res = RTResponse(value: response.result.value) as! Any
+                    let result = RTResult.success(res)
+                    onCompletion(result)
+                case .failure(let error):
+                    onCompletion(RTResult.failure(error))
+                default:
+                    print(response)
+                }
                 
                 
         }
