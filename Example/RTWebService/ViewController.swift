@@ -2,41 +2,91 @@
 //  ViewController.swift
 //  RTWebService
 //
-//  Created by rajan on 01/23/2017.
-//  Copyright (c) 2017 rajan. All rights reserved.
+//  Created by Rajan Twanabashu on 01/23/2017.
+//  Copyright (c) 2017 Rajan Twanabashu. All rights reserved.
 //
 
 import UIKit
 import RTWebService
+import AEXML
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let payload = RTPayload.init(parameter: ["limit":100, "offset":0, "path":"", "user_id":"57ed03d52d95e54e568652b0"], parameterEncoding:.defaultUrl)
-        let req = RTRequest.init(requestUrl: "http://uatbdmobile.com:3001/api/bd/assets",
+        /*
+        let payload = RTPayload.init(parameter: ["page":2], parameterEncoding:.defaultUrl)
+        let req = RTRequest.init(requestUrl: "https://reqres.in/api/user",
                                  requestMethod: .get,
-                                 header: ["language":"en", "device-type":"ios","api-key":"4c523dc68c1c727b2bb3ad069a31db31672be2b87e353afebbcfacc9f9ed9c77b2a260ece3a097e6405422b5e293a0fa67df014ab65136e3f1640907fad072dc"],
+                                 header: ["language":"en"],
                                  payload: payload)
         
-       
         RTWebService.restCall(request: req) { (response) in
             print("actual output ------------------------")
             switch response {
             case .success(let res):
-                    print("response value")
-                    print(res)
+                print("response value")
+                print(res)
             case .failure(let error):
-                    print("error value")
-                    print(error)
-            
+                print("error value")
+                print(error)
+                
             }
-            
-            
-            
         }
-   
+        
+        */
+ 
+        
+        //SOAP Call
+        
+        /*
+        // Create XML Document
+        let soap = AEXMLDocument()
+        let envelope = soap.addChild(name: "soap:Envelope",
+                                     attributes: ["xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance",
+                                                  "xmlns:xsd":"http://www.w3.org/2001/XMLSchema",
+                                                  "xmlns:soap":"http://schemas.xmlsoap.org/soap/envelope/"])
+        
+        //let header = envelope.addChild(name: "soap:Header")
+        let body = envelope.addChild(name: "soap:Body")
+        let geoIp = body.addChild(name:"GetGeoIP", attributes:["xmlns":"http://www.webservicex.net/"])
+        geoIp.addChild(name: "IPAddress", value: "124.41.219.215", attributes: [:])
+        
+ 
+        
+        
+        let soapPayload = RTPayload(parameter: ["soapdata" : soap.xml], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net/geoipservice.asmx",
+                                 requestMethod: .post,
+                                 header: ["language":"en",
+                                          "SOAPAction":"http://www.webservicex.net/GetGeoIP",
+                                          "length": String(soap.xml.characters.count),
+                                          "Content-Type": "text/xml"],
+                                 payload: soapPayload)
+        
+        */
+        
+        let soapPayload = RTPayload(parameter: ["IPAddress" : "124.41.219.215"], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net//geoipservice.asmx/GetGeoIP",
+                                  requestMethod: .get,
+                                  header: ["language":"en",
+                                           "Content-Type": "text/xml"],
+                                  payload: soapPayload)
+        
+        RTWebService.soapCall(request: req1) { (response) in
+            print("actual output ------------------------")
+            switch response {
+            case .success(let res):
+                print("response value")
+                print(res)
+            case .failure(let error):
+                print("error value")
+                print(error)
+                
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

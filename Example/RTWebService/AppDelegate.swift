@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  RTWebService
 //
-//  Created by rajan on 01/23/2017.
-//  Copyright (c) 2017 rajan. All rights reserved.
+//  Created by Rajan Twanabashu on 01/23/2017.
+//  Copyright (c) 2017 Rajan Twanabashu. All rights reserved.
 //
 
 import UIKit

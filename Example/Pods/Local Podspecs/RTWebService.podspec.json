@@ -22,6 +22,9 @@
   "dependencies": {
     "Alamofire": [
       "~> 4.3"
+    ],
+    "AEXML": [
+      "~> 4.0"
     ]
   }
 }
