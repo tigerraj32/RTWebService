@@ -10,18 +10,28 @@ extension DataRequest {
     }
 }
 
-//extension DefaultDataResponse {
-//    func debugLog()->Void{
-//        #if DEBUG
-//            debugPrint(self)
-//        #endif
-//    }
-//}
+extension DefaultDataResponse {
+    func debugLog()->Void{
+        #if DEBUG
+            debugPrint(self)
+        #endif
+    }
+}
 
 extension DataResponse {
     func debugLog()->Void{
         debugPrint(self)
     }
+}
+
+extension String: ParameterEncoding {
+    
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var request = try urlRequest.asURLRequest()
+        request.httpBody = data(using: .utf8, allowLossyConversion: false)
+        return request
+    }
+    
 }
 
 
@@ -65,7 +75,24 @@ public class RTWebService {
         
       
     }
-    
+
+    @discardableResult
+    public class  func soapCall(request: RTRequest, onCompletion: @escaping (RTResult<Any>)->Void){
+        
+        Alamofire.request(request.requestUrl,
+                          method: request.requestMethod,
+                          parameters: request.requestMethod == .get ? request.payload?.parameter : [:],
+                          encoding: request.requestMethod == .get ? (request.payload?.parameterEncoding)! : request.payload?.parameter?["soapdata"] as! String,
+                          headers: request.header)
+            .debugLog()
+            .responseString{ (response) in
+                response.debugLog()
+                
+                
+        }
+        
+        
+    }
 }
 
 

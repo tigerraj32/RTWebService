@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 
+
 public enum RTEncode  {
     case defaultUrl
     case queryUrl
@@ -56,12 +57,14 @@ public enum RTEncode  {
     
 }
 
+
+
 public struct RTRequest {
     public let requestUrl: String
     public let requestMethod:HTTPMethod
     public let header: [String: String]?
-    public var payload: RTPayload? = RTPayload(parameter: nil, parameterEncoding:.defaultUrl)
-   
+    public var payload: RTPayload?
+    
     public init(requestUrl: String, requestMethod: HTTPMethod, header:[String: String]?, payload: RTPayload?){
         self.requestUrl = requestUrl
         self.requestMethod = requestMethod
