@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         /*
-        let payload = RTPayload.init(parameter: ["page":2], parameterEncoding:.defaultUrl)        
+        let payload = RTPayload.init(parameter: ["page":2], parameterEncoding:.defaultUrl)
         let req = RTRequest.init(requestUrl: "https://reqres.in/api/user",
                                  requestMethod: .get,
                                  header: ["language":"en"],
@@ -35,33 +35,44 @@ class ViewController: UIViewController {
             }
         }
         
-        
         */
+ 
         
         //SOAP Call
         
+        /*
+        // Create XML Document
         let soap = AEXMLDocument()
-        let envelope = soap.addChild(name: "soapenv:Envelope",
-                                     attributes: ["xmlns:soapenv":"http://schemas.xmlsoap.org/soap/envelope/",
-                                                  "xmlns:cat":"NS1/pcacsoap"])
+        let envelope = soap.addChild(name: "soap:Envelope",
+                                     attributes: ["xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance",
+                                                  "xmlns:xsd":"http://www.w3.org/2001/XMLSchema",
+                                                  "xmlns:soap":"http://schemas.xmlsoap.org/soap/envelope/"])
         
-        let header = envelope.addChild(name: "soapenv:Header")
-        let body = envelope.addChild(name: "soapenv:Body")
-        let catInfo = body.addChild(name: "cat:sendcataloginfo")
-        let request = catInfo.addChild(name: "cat:request")
-        let ttrequest = request.addChild(name: "cat:ttrequest")
-        ttrequest.addChild(name: "cat:calltype", value: "category", attributes: [:])
-        ttrequest.addChild(name: "cat:code", value: "18,7,0,15,16", attributes: [:])
+        //let header = envelope.addChild(name: "soap:Header")
+        let body = envelope.addChild(name: "soap:Body")
+        let geoIp = body.addChild(name:"GetGeoIP", attributes:["xmlns":"http://www.webservicex.net/"])
+        geoIp.addChild(name: "IPAddress", value: "124.41.219.215", attributes: [:])
         
-        let soapPayload = RTPayload(parameter: ["soapdata" : soap.xml], parameterEncoding: .custom)
-        let req1 = RTRequest.init(requestUrl: "http://catapp.javra.com:8080/pcactest/wsa1",
+ 
+        
+        
+        let soapPayload = RTPayload(parameter: ["soapdata" : soap.xml], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net/geoipservice.asmx",
                                  requestMethod: .post,
                                  header: ["language":"en",
-                                          "SOAPAction":"",
+                                          "SOAPAction":"http://www.webservicex.net/GetGeoIP",
                                           "length": String(soap.xml.characters.count),
                                           "Content-Type": "text/xml"],
                                  payload: soapPayload)
         
+        */
+        
+        let soapPayload = RTPayload(parameter: ["IPAddress" : "124.41.219.215"], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net//geoipservice.asmx/GetGeoIP",
+                                  requestMethod: .get,
+                                  header: ["language":"en",
+                                           "Content-Type": "text/xml"],
+                                  payload: soapPayload)
         
         RTWebService.soapCall(request: req1) { (response) in
             print("actual output ------------------------")

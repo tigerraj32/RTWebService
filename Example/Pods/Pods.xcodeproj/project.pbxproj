@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00871AE9F179530EC8B956327CF33209 /* RTPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67765F66C03DF10CE6EA84D7FEBF81B8 /* RTPayload.swift */; };
+		014170736D4E6311108117708E1E4C2E /* RTPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008CF24626E31D3D3A3B8EB069840345 /* RTPayload.swift */; };
 		0FB535D2EE4B2D537CC427731334FDEF /* Pods-RTWebService_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E47F3CA659170A828D30253B165263F1 /* Pods-RTWebService_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10472F73882CF200B9791A610D94FDEC /* RTWebService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E945B1CEE0561C2B3DF6700E3CA4F75 /* RTWebService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DB3637F9F99071824FEFF7FB117E70 /* Timeline.swift */; };
@@ -16,7 +16,6 @@
 		20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69BCA2BF46A34ED492C6C27AFB75F9 /* Error.swift */; };
 		2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C55303CDBA835912125C463ABC1B41 /* Options.swift */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E55C490857121ED1982ADA0C744000 /* TaskDelegate.swift */; };
-		39756368CEEF55E4CE62C7FD92F3914D /* RTWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932BA9FFF549631DCC2D9D9AFF1E8183 /* RTWebService.swift */; };
 		3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E2AC002647CC9E6EAA34ECD309A38F /* Parser.swift */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690466750D81AFE6508FB7860410881 /* Request.swift */; };
 		54C8A3FDE9DB92153E65093688BE0B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D423039814C5038F3A5D330D6CC5327 /* Foundation.framework */; };
@@ -30,6 +29,7 @@
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B09B3C3C27FF478716E8473B6F60 /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AE7343841ABD05502D787DD61AD79 /* Result.swift */; };
 		8155CA638D43A09AD6BAD9D4CE4EF959 /* Pods-RTWebService_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A84A14F9ECC0D6604CFADD239715C977 /* Pods-RTWebService_Tests-dummy.m */; };
+		8FD65964927AB8D5191C1D7E2AC68A7E /* RTWebService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773786CB1982DCFA34C8911BB143C759 /* RTWebService-dummy.m */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263CC0FA503E8A3BCBDB36793FD6D6E /* AFError.swift */; };
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D423039814C5038F3A5D330D6CC5327 /* Foundation.framework */; };
 		A2111E062BA151BAFC3E261B92CFC659 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBF789D31B25B9B43092BE6D8AFD189 /* AEXML.framework */; };
@@ -41,13 +41,13 @@
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863EDFEA0143E6754B7FB8DB2B98F964 /* Validation.swift */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB1156C5066D9E09DED46A1634997B /* ParameterEncoding.swift */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E3811F27EB189F03F40699AFA8B73 /* Response.swift */; };
+		D69964529FBCB5A8AE4281AB0504BEAA /* RTWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E642473B82B03746A9F276C0C10A1B /* RTWebService.swift */; };
 		E098FDBC47C084B7986E71E273BCF5C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D423039814C5038F3A5D330D6CC5327 /* Foundation.framework */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851B01DA31DE3E243D2D41FFD5A9DBC /* Notifications.swift */; };
 		F513C761430803259530321E44734196 /* Pods-RTWebService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD9DE5044A5C54C76D2CD351B2374C9 /* Pods-RTWebService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F517CDACE1583248D76C1B7058CD867F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D423039814C5038F3A5D330D6CC5327 /* Foundation.framework */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571621F26F093A1B026DDF55AEE3A35 /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4464E83E3442EB2BBBDBD4DF560677A /* Alamofire.swift */; };
-		FA78C3B20F51AA2E6ED9361A6ADC338D /* RTWebService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773786CB1982DCFA34C8911BB143C759 /* RTWebService-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,35 +89,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0544135CFB6EB1D5DF9BA0C7DEA508FA /* RTWebService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RTWebService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		008CF24626E31D3D3A3B8EB069840345 /* RTPayload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTPayload.swift; sourceTree = "<group>"; };
+		0544135CFB6EB1D5DF9BA0C7DEA508FA /* RTWebService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RTWebService.framework; path = RTWebService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0690466750D81AFE6508FB7860410881 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		06C55303CDBA835912125C463ABC1B41 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Options.swift; sourceTree = "<group>"; };
 		086313720A34C7C4431B88E31F2F5FA6 /* Pods-RTWebService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTWebService_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		087A0AA8300BF69AA5013F1779F14BC5 /* Pods-RTWebService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RTWebService_Example.modulemap"; sourceTree = "<group>"; };
+		087A0AA8300BF69AA5013F1779F14BC5 /* Pods-RTWebService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RTWebService_Example.modulemap"; sourceTree = "<group>"; };
 		0B82A22D6961A8563661E3ED793B023C /* RTWebService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTWebService-prefix.pch"; sourceTree = "<group>"; };
 		0DBF789D31B25B9B43092BE6D8AFD189 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFA0C10DE9DDE5DA594047EAE34866A /* Pods-RTWebService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTWebService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0E241B86C763CF8D129F1A84E11E4CF9 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		11C9DCA6DC4059A06A1B62B2EE1149ED /* Pods-RTWebService_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RTWebService_Example-dummy.m"; sourceTree = "<group>"; };
-		1293D5AA6905CB04B8A5C74F16E49BED /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1677A52F3CE844A5D92544DACB36E56D /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AEXML.modulemap; sourceTree = "<group>"; };
+		1293D5AA6905CB04B8A5C74F16E49BED /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML.framework; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1677A52F3CE844A5D92544DACB36E56D /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AEXML.modulemap; sourceTree = "<group>"; };
+		17E642473B82B03746A9F276C0C10A1B /* RTWebService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTWebService.swift; sourceTree = "<group>"; };
 		1D423039814C5038F3A5D330D6CC5327 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		20E55C490857121ED1982ADA0C744000 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		2644E80A48DC61BD54FDFFF8452FB3A9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2644E80A48DC61BD54FDFFF8452FB3A9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFD9F5DBAD90CCA9BC133C73150FEEC /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
-		2EA91095BC4F0CE2E92660A44257F75D /* Pods_RTWebService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTWebService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA91095BC4F0CE2E92660A44257F75D /* Pods_RTWebService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RTWebService_Example.framework; path = "Pods-RTWebService_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DA2619465474CB30BB57BA5D6C3602 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F69BCA2BF46A34ED492C6C27AFB75F9 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
 		4128222A1BBBF48459C00AB44308B118 /* Pods-RTWebService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTWebService_Example-frameworks.sh"; sourceTree = "<group>"; };
 		45604CA2305E4438D3909453EAEAC638 /* RTWebService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RTWebService.xcconfig; sourceTree = "<group>"; };
-		482776EA79908CE584E97A14025F8D67 /* RTWebService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RTWebService.modulemap; sourceTree = "<group>"; };
+		482776EA79908CE584E97A14025F8D67 /* RTWebService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RTWebService.modulemap; sourceTree = "<group>"; };
 		48879E476EB80F7BBDC4807C52054332 /* Pods-RTWebService_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTWebService_Example-resources.sh"; sourceTree = "<group>"; };
 		5263CC0FA503E8A3BCBDB36793FD6D6E /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		5645A918DAA5978B583DF5E2C9171C33 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
 		614E3811F27EB189F03F40699AFA8B73 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		62DB1156C5066D9E09DED46A1634997B /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		6571621F26F093A1B026DDF55AEE3A35 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		67765F66C03DF10CE6EA84D7FEBF81B8 /* RTPayload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTPayload.swift; sourceTree = "<group>"; };
 		6778853B7FEE07423BCE8DF09B45E0FD /* Pods-RTWebService_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTWebService_Tests-resources.sh"; sourceTree = "<group>"; };
 		69CBAC9D8EA4881D4E7B30403AA7DD02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C624B27F78C0F966439C52DAB571769 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,14 +126,13 @@
 		773786CB1982DCFA34C8911BB143C759 /* RTWebService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RTWebService-dummy.m"; sourceTree = "<group>"; };
 		84C1FEF2FF60E8C7545DE286990961AC /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		84F60225058518A94FF12B38ACC638E1 /* Pods-RTWebService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTWebService_Example.release.xcconfig"; sourceTree = "<group>"; };
-		852F5B2838C0FF24EFEB74485BFBDCBD /* Pods-RTWebService_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RTWebService_Tests.modulemap"; sourceTree = "<group>"; };
+		852F5B2838C0FF24EFEB74485BFBDCBD /* Pods-RTWebService_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RTWebService_Tests.modulemap"; sourceTree = "<group>"; };
 		863EDFEA0143E6754B7FB8DB2B98F964 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		89DB3637F9F99071824FEFF7FB117E70 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		8DAFD1FC9C48DDC1AF0C328337233275 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		92405751010235AC77D255CD5E67A3CC /* Pods-RTWebService_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RTWebService_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		932BA9FFF549631DCC2D9D9AFF1E8183 /* RTWebService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTWebService.swift; sourceTree = "<group>"; };
 		9374666943B338C6325B3D0B6088E029 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/Element.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9485F97A5974E731E1977D78EB6BEB3C /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
 		9E945B1CEE0561C2B3DF6700E3CA4F75 /* RTWebService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTWebService-umbrella.h"; sourceTree = "<group>"; };
 		A0D95CBA65031E4CAFE55650F3681F10 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		CD2D8491DCC8E1FA9A2A03E27D9CAC02 /* Pods-RTWebService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTWebService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CF5AB723A0D479CF96FF82931EBC50C1 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/Document.swift; sourceTree = "<group>"; };
 		D4464E83E3442EB2BBBDBD4DF560677A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		DC40CBFD3AD901BD2D3C83B43544481A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		DE1F46BE4FA71241CACCEE9919EF4481 /* Pods_RTWebService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTWebService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC40CBFD3AD901BD2D3C83B43544481A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		DE1F46BE4FA71241CACCEE9919EF4481 /* Pods_RTWebService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RTWebService_Tests.framework; path = "Pods-RTWebService_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EE13A320B004FD12F59417AEEE84AD /* Pods-RTWebService_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTWebService_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E47F3CA659170A828D30253B165263F1 /* Pods-RTWebService_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RTWebService_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E7E2AC002647CC9E6EAA34ECD309A38F /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
@@ -218,6 +218,7 @@
 				E7E2AC002647CC9E6EAA34ECD309A38F /* Parser.swift */,
 				A7AD8B08740B1CA58BBB56CC1EFAF7FD /* Support Files */,
 			);
+			name = AEXML;
 			path = AEXML;
 			sourceTree = "<group>";
 		};
@@ -344,6 +345,16 @@
 			path = "../Target Support Files/AEXML";
 			sourceTree = "<group>";
 		};
+		B88370F2399B665F51C27FCE111AC9F1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				008CF24626E31D3D3A3B8EB069840345 /* RTPayload.swift */,
+				17E642473B82B03746A9F276C0C10A1B /* RTWebService.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D99D6BFD9E50801CB04340F85EBAFBE2 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +377,17 @@
 				863EDFEA0143E6754B7FB8DB2B98F964 /* Validation.swift */,
 				3A1E0B16962D6DC07479FF59DAB490F7 /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		DA29B5096818014952BE73A88B6B3212 /* RTWebService */ = {
+			isa = PBXGroup;
+			children = (
+				B88370F2399B665F51C27FCE111AC9F1 /* Classes */,
+			);
+			name = RTWebService;
+			path = RTWebService;
 			sourceTree = "<group>";
 		};
 		DBEC3C49DDE79A352668620F4C3A2E55 /* Pods */ = {
@@ -392,31 +413,14 @@
 			path = "Example/Pods/Target Support Files/RTWebService";
 			sourceTree = "<group>";
 		};
-		EFAF89614213F38E79BDC6A122CFAA69 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				67765F66C03DF10CE6EA84D7FEBF81B8 /* RTPayload.swift */,
-				932BA9FFF549631DCC2D9D9AFF1E8183 /* RTWebService.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		EFC21341D164D8F1657E83C6B44CB0A8 /* RTWebService */ = {
 			isa = PBXGroup;
 			children = (
-				FD6FD34B1B9E53A825AEE23FAF0E52A4 /* RTWebService */,
+				DA29B5096818014952BE73A88B6B3212 /* RTWebService */,
 				EB396AFA95B799B3BD0AB15A7DC7A088 /* Support Files */,
 			);
 			name = RTWebService;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		FD6FD34B1B9E53A825AEE23FAF0E52A4 /* RTWebService */ = {
-			isa = PBXGroup;
-			children = (
-				EFAF89614213F38E79BDC6A122CFAA69 /* Classes */,
-			);
-			path = RTWebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,7 +510,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DCB86D666B7ECC0DBFF48FAEFA53A3 /* Build configuration list for PBXNativeTarget "RTWebService" */;
 			buildPhases = (
-				478018C9F61673D661BC82FAA963949C /* Sources */,
+				A82B357BD30EB11580B5E3C885705234 /* Sources */,
 				98AEB096468C832097DBDC244057DB55 /* Frameworks */,
 				7A6CF8C5C80A052B46A6C45E9FAA56D1 /* Headers */,
 			);
@@ -611,16 +615,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		478018C9F61673D661BC82FAA963949C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00871AE9F179530EC8B956327CF33209 /* RTPayload.swift in Sources */,
-				FA78C3B20F51AA2E6ED9361A6ADC338D /* RTWebService-dummy.m in Sources */,
-				39756368CEEF55E4CE62C7FD92F3914D /* RTWebService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		56EA9FED050CA43B4900EE9C84162597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +633,16 @@
 				20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */,
 				2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */,
 				3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82B357BD30EB11580B5E3C885705234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014170736D4E6311108117708E1E4C2E /* RTPayload.swift in Sources */,
+				8FD65964927AB8D5191C1D7E2AC68A7E /* RTWebService-dummy.m in Sources */,
+				D69964529FBCB5A8AE4281AB0504BEAA /* RTWebService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 {
   "name": "RTWebService",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "summary": "Elegant library to connect with server through REST, SOAP, FTP, SSH",
   "description": "RTWebService is a wrapper around Alamofire for making REST and SOAP call in easiest possible way.",
   "homepage": "https://github.com/tigerraj32/RTWebService",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/tigerraj32/RTWebService.git",
-    "tag": "0.1.1"
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"

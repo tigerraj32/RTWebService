@@ -1,7 +1,7 @@
 PODS:
   - AEXML (4.0.1)
   - Alamofire (4.3.0)
-  - RTWebService (0.1.1):
+  - RTWebService (0.1.0):
     - AEXML (~> 4.0)
     - Alamofire (~> 4.3)
 
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  RTWebService: b1de0f9f8363d4c8a90ea68310bcf7848c4d7d98
+  RTWebService: 82e533dde12408c72d34e414e34792230194ced2
 
 PODFILE CHECKSUM: 51ae79bf3db01e2cd5e5288e45d0dfd346638fef
 
-COCOAPODS: 1.2.0.rc.1
+COCOAPODS: 1.1.1
