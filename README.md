@@ -127,6 +127,107 @@ $ curl -i \
 ```
 
 
+
+
+##1. SOAP Web Service Handling
+TO make a soap call we need to have following things setup before making a service call
+* Host address
+* SOAP Action
+* SOAP Message Body
+
+[Webservicex](http://www.webservicex.net/) have tons of soap request to work with. 
+
+### Soap Get Request
+```swift
+let soapPayload = RTPayload(parameter: ["IPAddress" : "124.41.219.215"], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net//geoipservice.asmx/GetGeoIP",
+                                  requestMethod: .get,
+                                  header: ["language":"en",
+                                           "Content-Type": "text/xml"],
+                                  payload: soapPayload)
+        
+        RTWebService.soapCall(request: req1) { (response) in
+            print("actual output ------------------------")
+            switch response {
+            case .success(let res):
+                print("response value")
+                print(res)
+            case .failure(let error):
+                print("error value")
+                print(error)
+                
+            }
+        }
+
+```
+
+### Soap Post Request
+
+Let's make a SOAP request with following  request configuration
+
+```xml
+POST /geoipservice.asmx HTTP/1.1
+Host: www.webservicex.net
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://www.webservicex.net/GetGeoIP"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetGeoIP xmlns="http://www.webservicex.net/">
+      <IPAddress>string</IPAddress>
+    </GetGeoIP>
+  </soap:Body>
+</soap:Envelope>
+```
+
+Now with RTWebservice
+```swift
+// Create XML Document
+        let soap = AEXMLDocument()
+        let envelope = soap.addChild(name: "soap:Envelope",
+                                     attributes: ["xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance",
+                                                  "xmlns:xsd":"http://www.w3.org/2001/XMLSchema",
+                                                  "xmlns:soap":"http://schemas.xmlsoap.org/soap/envelope/"])
+        
+        //let header = envelope.addChild(name: "soap:Header")
+        let body = envelope.addChild(name: "soap:Body")
+        let geoIp = body.addChild(name:"GetGeoIP", attributes:["xmlns":"http://www.webservicex.net/"])
+        geoIp.addChild(name: "IPAddress", value: "124.41.219.215", attributes: [:])
+        
+ 
+        
+        
+        let soapPayload = RTPayload(parameter: ["soapdata" : soap.xml], parameterEncoding: .defaultUrl)
+        let req1 = RTRequest.init(requestUrl: "http://www.webservicex.net/geoipservice.asmx",
+                                 requestMethod: .post,
+                                 header: ["language":"en",
+                                          "SOAPAction":"http://www.webservicex.net/GetGeoIP",
+                                          "length": String(soap.xml.characters.count),
+                                          "Content-Type": "text/xml"],
+                                 payload: soapPayload)
+        
+ 
+        
+    
+        
+        RTWebService.soapCall(request: req1) { (response) in
+            print("actual output ------------------------")
+            switch response {
+            case .success(let res):
+                print("response value")
+                print(res)
+            case .failure(let error):
+                print("error value")
+                print(error)
+                
+            }
+        }
+```
+
 ## Author
 rajan, rajantwnabashu@gmail.com
 
