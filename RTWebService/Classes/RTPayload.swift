@@ -9,8 +9,6 @@
 import Foundation
 import Alamofire
 
-
-
 public enum RTEncode  {
     case defaultUrl
     case queryUrl
