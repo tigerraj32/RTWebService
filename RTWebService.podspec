@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RTWebService'
-  s.version          = '0.2.0-beta'
+  s.version          = '0.2.2'
   s.summary          = 'Elegant library to connect with server through REST, SOAP, FTP, SSH'
 
 # This description is used to generate tags and improve search results.
