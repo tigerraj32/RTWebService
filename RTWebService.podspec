@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rajan' => 'rajantwnabashu@gmail.com' }
   s.source           = { :git => 'https://github.com/tigerraj32/RTWebService.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/tigerraj32'
 
   s.ios.deployment_target = '8.0'
 
